@@ -3,6 +3,7 @@ from app.database import Base, engine
 from app import models
 
 from app.routes.receipts import router as receipt_router
+from app.routes.deliveries import router as delivery_router
 
 # Create database tables
 Base.metadata.create_all(bind=engine)
@@ -14,6 +15,7 @@ app = FastAPI(
 
 # Register API routes
 app.include_router(receipt_router)
+app.include_router(delivery_router)
 
 
 @app.get("/")
