@@ -5,7 +5,7 @@ from app.models.location import Location
 from app.models.stock import Stock
 from app.models.receipt import Receipt, ReceiptItem
 from app.models.delivery import Delivery, DeliveryItem
-from app.models.transfer import Transfer
+from app.models.transfer import InternalTransfer, TransferItem, Transfer
 from app.models.adjustment import StockAdjustment
 from app.models.stock_movement import StockMovement
 from app.models.reorder_rule import ReorderRule
