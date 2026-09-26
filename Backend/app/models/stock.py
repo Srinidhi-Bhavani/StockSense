@@ -19,4 +19,10 @@ class Stock(Base):
         nullable=False
     )
 
-    quantity = Column(Float, default=0)
+    location_id = Column(
+        Integer,
+        ForeignKey("locations.id"),
+        nullable=True
+    )
+
+    quantity = Column(Float, default=0.0)
